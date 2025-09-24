@@ -8,9 +8,9 @@ export class PrismaService extends PrismaClient implements OnModuleInit {
   }
 
   // Use Node's process event to avoid TS issues with Prisma $on typing
-  async enableShutdownHooks(app: INestApplication) {
-    process.on('beforeExit', async () => {
-      await app.close();
+  enableShutdownHooks(app: INestApplication) {
+    process.on('beforeExit', () => {
+      app.close().then(() => {});
     });
   }
 }
