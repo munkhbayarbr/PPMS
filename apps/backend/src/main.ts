@@ -5,7 +5,6 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { cors: true });
-
   app.setGlobalPrefix('api');
   app.useGlobalPipes(
     new ValidationPipe({
@@ -18,8 +17,23 @@ async function bootstrap() {
   const config = new DocumentBuilder()
     .setTitle('PPMS API')
     .setVersion('1.0')
+    .addBearerAuth(
+      {
+        type: 'http',
+        scheme: 'bearer',
+        bearerFormat: 'JWT',
+        in: 'header',
+      },
+      'bearer', 
+    )
     .addTag('customers')
     .build();
+
+  console.log(
+    'JWT secret present?',
+    !!process.env.JWT_SECRET,
+    process.env.JWT_SECRET?.length,
+  );
 
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api/docs', app, document);
