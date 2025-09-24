@@ -1,0 +1,26 @@
+services:
+  db:
+    image: postgres:16
+    container_name: ppms-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ppms
+      POSTGRES_PASSWORD: ppms
+      POSTGRES_DB: ppms
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./docker/postgres-data:/var/lib/postgresql/data
+
+  # Optional: browser DB admin at http://localhost:8080
+  pgadmin:
+    image: dpage/pgadmin4:8
+    container_name: ppms-pgadmin
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@local
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "8080:80"
+    depends_on:
+      - db

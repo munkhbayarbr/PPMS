@@ -1,0 +1,194 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider          = "postgresql"
+  url               = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  MANAGER
+  WORKER
+}
+
+enum OrderStatus {
+  DRAFT
+  IN_PROGRESS
+  COMPLETED
+  SHIPPED
+  CANCELLED
+}
+
+enum BatchStatus {
+  QUEUED
+  RUNNING
+  DONE
+  HOLD
+}
+
+enum StageType {
+  RECEIVE
+  DYE
+  MIX
+  COMB
+  SPIN
+  WIND
+  DOUBLE
+  TWIST
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  role      Role     @default(WORKER)
+  password  String
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // relations
+  auditLogs    AuditLog[]
+  operatedRuns StageRun[] @relation("UserOperator")
+}
+
+model WarehouseItem {
+  id            String   @id @default(cuid())
+  code          String   @unique
+  rawWeightKg   Decimal  @db.Decimal(12, 3)
+  moisturePct   Decimal? @db.Decimal(5, 2)
+  cleanWeightKg Decimal  @db.Decimal(12, 3)
+  location      String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  allocations OrderAllocation[]
+  batchInputs Batch[]           @relation("WarehouseItemToBatch")
+
+  @@index([code])
+}
+
+model Order {
+  id           String      @id @default(cuid())
+  customerName String
+  productSpec  String?
+  requestedKg  Decimal     @db.Decimal(12, 3)
+  status       OrderStatus @default(DRAFT)
+  dueDate      DateTime?
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+
+  allocations OrderAllocation[]
+  shipment    Shipment?
+
+  @@index([status])
+  @@index([customerName])
+}
+
+model OrderAllocation {
+  id              String   @id @default(cuid())
+  orderId         String
+  warehouseItemId String
+  allocatedKg     Decimal  @db.Decimal(12, 3)
+  createdAt       DateTime @default(now())
+
+  order         Order         @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  warehouseItem WarehouseItem @relation(fields: [warehouseItemId], references: [id], onDelete: Restrict)
+
+  @@unique([orderId, warehouseItemId])
+}
+
+model StageDefinition {
+  id          String    @id @default(cuid())
+  name        String
+  type        StageType
+  capacityKgH Int?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  // self many-to-many (no fields/references here)
+  prerequisites StageDefinition[] @relation("StagePrereq")
+  requiredBy    StageDefinition[] @relation("StagePrereq")
+
+  runs StageRun[]
+
+  @@unique([type])
+}
+
+model Batch {
+  id           String      @id @default(cuid())
+  code         String      @unique
+  sourceItemId String?
+  totalInputKg Decimal     @db.Decimal(12, 3)
+  status       BatchStatus @default(QUEUED)
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+
+  sourceItem      WarehouseItem? @relation("WarehouseItemToBatch", fields: [sourceItemId], references: [id])
+  runs            StageRun[]
+  lineageParentId String?
+  lineageParent   Batch?         @relation("BatchLineage", fields: [lineageParentId], references: [id])
+  lineageChildren Batch[]        @relation("BatchLineage")
+
+  @@index([status])
+}
+
+model StageRun {
+  id          String    @id @default(cuid())
+  batchId     String
+  stageId     String
+  startedAt   DateTime  @default(now())
+  finishedAt  DateTime?
+  inputKg     Decimal   @db.Decimal(12, 3)
+  outputKg    Decimal?  @db.Decimal(12, 3)
+  wasteKg     Decimal?  @db.Decimal(12, 3)
+  qualityNote String?
+  operatorId  String?
+
+  batch    Batch           @relation(fields: [batchId], references: [id], onDelete: Cascade)
+  stage    StageDefinition @relation(fields: [stageId], references: [id], onDelete: Restrict)
+  operator User?           @relation("UserOperator", fields: [operatorId], references: [id])
+  wastes   WasteRecord[]
+
+  @@index([batchId, stageId])
+}
+
+model WasteRecord {
+  id         String   @id @default(cuid())
+  stageRunId String
+  kind       String
+  amountKg   Decimal  @db.Decimal(12, 3)
+  note       String?
+  createdAt  DateTime @default(now())
+
+  stageRun StageRun @relation(fields: [stageRunId], references: [id], onDelete: Cascade)
+
+  @@index([stageRunId])
+}
+
+model Shipment {
+  id        String    @id @default(cuid())
+  orderId   String    @unique
+  shippedAt DateTime?
+  carrier   String?
+  docUrl    String?
+
+  order Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  userId    String?
+  action    String
+  entity    String?
+  entityId  String?
+  details   Json?
+  createdAt DateTime @default(now())
+
+  user User? @relation(fields: [userId], references: [id])
+
+  @@index([entity, entityId])
+}
