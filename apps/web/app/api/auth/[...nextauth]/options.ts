@@ -13,7 +13,7 @@ export const authOptions: NextAuthOptions = {
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) return null;
         console.log('CRED',credentials)
-        const res = await fetch(`${process.env.BACKEND_BASE}/api/api/auth/login`, {
+        const res = await fetch(`${process.env.BACKEND_BASE}/auth/login`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -23,7 +23,6 @@ export const authOptions: NextAuthOptions = {
         });
 
         const data = await res.json();
-        console.log('RESPONSE:',data)
         // if (!res.ok || !data.access_token || !data.user) return null;
 
         // Return a "User" shaped object (we augmented types to allow extra fields)
