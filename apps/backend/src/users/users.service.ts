@@ -8,7 +8,7 @@ export class UsersService {
   constructor(private prisma: PrismaService) {}
 
   async findByEmail(email: string) {
-    if (!email) return null; // avoid prisma error on undefined
+    if (!email) return null;
     return this.prisma.user.findUnique({ where: { email } });
   }
 
@@ -33,7 +33,6 @@ export class UsersService {
         },
       });
     } catch (e: any) {
-      // unique constraint safety net
       if (e?.code === 'P2002') throw new ConflictException('Email already in use');
       throw e;
     }

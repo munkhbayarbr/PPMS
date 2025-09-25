@@ -5,7 +5,6 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { cors: true });
-  app.setGlobalPrefix('api');
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,
@@ -26,18 +25,10 @@ async function bootstrap() {
       },
       'bearer', 
     )
-    .addTag('customers')
     .build();
-
-  console.log(
-    'JWT secret present?',
-    !!process.env.JWT_SECRET,
-    process.env.JWT_SECRET?.length,
-  );
-
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api/docs', app, document);
+  SwaggerModule.setup('swagger', app, document);
 
-  await app.listen(process.env.PORT || 3001);
+  await app.listen(process.env.PORT!);
 }
 bootstrap();

@@ -26,11 +26,11 @@ export default function LoginPage() {
     });
 
     setLoading(false);
-    console.log('client error')
+    console.log('client error',res)
     if (res?.error) {
       setError("Invalid credentials");
     } else {
-      router.push("/"); // redirect to homepage after login
+      router.push("/"); 
     }
   }
 
