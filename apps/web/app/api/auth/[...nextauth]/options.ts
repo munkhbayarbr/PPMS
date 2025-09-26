@@ -23,9 +23,6 @@ export const authOptions: NextAuthOptions = {
         });
 
         const data = await res.json();
-        // if (!res.ok || !data.access_token || !data.user) return null;
-
-        // Return a "User" shaped object (we augmented types to allow extra fields)
         return {
           id: data.user.id as string,
           email: data.user.email as string,

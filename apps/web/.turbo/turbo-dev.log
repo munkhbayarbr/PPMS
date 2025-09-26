@@ -8,24 +8,81 @@
    - Environments: .env
 
  [32m[1m✓[22m[39m Starting...
- [32m[1m✓[22m[39m Compiled middleware in 134ms
- [32m[1m✓[22m[39m Ready in 1084ms
+ [32m[1m✓[22m[39m Compiled middleware in 222ms
+ [32m[1m✓[22m[39m Ready in 1049ms
  [37m[1m○[22m[39m Compiling /login ...
- [32m[1m✓[22m[39m Compiled /login in 1210ms
+ [32m[1m✓[22m[39m Compiled /login in 1793ms
  [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
 Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
 The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
 Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
 
 
- GET /login [32m200[39m in 1378ms
+ [31m[1m⨯[22m[39m The requested resource isn't a valid image for /Logo.png received [1mnull[22m
+ GET /login [32m200[39m in 2133ms
  [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
 Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
 The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
 Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
 
 
- [32m[1m✓[22m[39m Compiled /api/auth/[...nextauth] in 174ms
+ [32m[1m✓[22m[39m Compiled /favicon.ico in 147ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 407ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [31m[1m⨯[22m[39m The requested resource isn't a valid image for /Logo.png received [1mnull[22m
+ GET /login [32m200[39m in 90ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 233ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 76ms
+ [31m[1m⨯[22m[39m The requested resource isn't a valid image for /Logo.png received [1mnull[22m
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 65ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [32m[1m✓[22m[39m Compiled /api/auth/[...nextauth] in 201ms
  [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
 Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
 The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
@@ -36,7 +93,1031 @@ Exports made by CommonJs syntax will lead to a runtime error, since the module i
 https://next-auth.js.org/warnings#nextauth_url
 [next-auth][warn][NO_SECRET] 
 https://next-auth.js.org/warnings#no_secret
- GET /api/auth/providers [32m200[39m in 908ms
+ GET /api/auth/providers [32m200[39m in 913ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /api/auth/csrf [32m200[39m in 230ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+CRED {
+  redirect: [32m'false'[39m,
+  email: [32m'test@gmail.com'[39m,
+  password: [32m'test123'[39m,
+  callbackUrl: [32m'/'[39m,
+  csrfToken: [32m'c10f5e067572c995b9f942b8ea782acf1a7a6bc41abd6aa2e8db62a1f83cf3c5'[39m,
+  json: [32m'true'[39m
+}
+ POST /api/auth/callback/credentials [32m200[39m in 496ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 23ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 79ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 121ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 70ms
+ [31m[1m⨯[22m[39m The requested resource isn't a valid image for /Logo.png received [1mnull[22m
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 77ms
+ [31m[1m⨯[22m[39m The requested resource isn't a valid image for /Logo.png received [1mnull[22m
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [31m[1m⨯[22m[39m The requested resource isn't a valid image for /logo.png received [1mnull[22m
+ [31m[1m⨯[22m[39m The requested resource isn't a valid image for /logo.png received [1mnull[22m
+ [32m[1m✓[22m[39m Compiled in 47ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 162ms
+ [31m[1m⨯[22m[39m The requested resource isn't a valid image for /logo.png received [1mnull[22m
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 228ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [31m[1m⨯[22m[39m The requested resource isn't a valid image for /logo.png received [1mnull[22m
+ GET /login [32m200[39m in 69ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 228ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [31m[1m⨯[22m[39m The requested resource isn't a valid image for /logo.png received [1mnull[22m
+ GET /login [32m200[39m in 88ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 237ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 96ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /api/auth/providers [32m200[39m in 250ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /api/auth/csrf [32m200[39m in 252ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+CRED {
+  redirect: [32m'false'[39m,
+  email: [32m'test@gmail.com'[39m,
+  password: [32m'test123'[39m,
+  callbackUrl: [32m'/'[39m,
+  csrfToken: [32m'c10f5e067572c995b9f942b8ea782acf1a7a6bc41abd6aa2e8db62a1f83cf3c5'[39m,
+  json: [32m'true'[39m
+}
+ POST /api/auth/callback/credentials [32m200[39m in 565ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 42ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico?favicon.1ff1bb9a.ico [32m200[39m in 270ms
+ GET /favicon.ico [32m200[39m in 270ms
+ [32m[1m✓[22m[39m Compiled middleware in 2ms
+ [32m[1m✓[22m[39m Compiled in 0ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 68ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 238ms
+ [32m[1m✓[22m[39m Compiled middleware in 1ms
+ [32m[1m✓[22m[39m Compiled in 4ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 61ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 236ms
+ [32m[1m✓[22m[39m Compiled in 23ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 168ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 236ms
+ [32m[1m✓[22m[39m Compiled in 18ms
+ [32m[1m✓[22m[39m Compiled in 14ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 150ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 226ms
+ [32m[1m✓[22m[39m Compiled in 12ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 127ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 230ms
+ [32m[1m✓[22m[39m Compiled in 52ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 162ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 230ms
+ [32m[1m✓[22m[39m Compiled in 14ms
+ [32m[1m✓[22m[39m Compiled in 14ms
+ [32m[1m✓[22m[39m Compiled in 13ms
+ [32m[1m✓[22m[39m Compiled in 57ms
+ [32m[1m✓[22m[39m Compiled in 11ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 140ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 224ms
+ [32m[1m✓[22m[39m Compiled in 15ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 182ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 238ms
+ [32m[1m✓[22m[39m Compiled in 25ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 158ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 246ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 70ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 221ms
+ [32m[1m✓[22m[39m Compiled in 20ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 169ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 225ms
+ [32m[1m✓[22m[39m Compiled in 22ms
+ [32m[1m✓[22m[39m Compiled in 12ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 173ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 238ms
+ [32m[1m✓[22m[39m Compiled in 14ms
+ [32m[1m✓[22m[39m Compiled in 14ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 177ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 228ms
+ [32m[1m✓[22m[39m Compiled in 11ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 171ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 222ms
+ [32m[1m✓[22m[39m Compiled in 21ms
+ [32m[1m✓[22m[39m Compiled in 17ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 177ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 229ms
+ [32m[1m✓[22m[39m Compiled in 15ms
+ [32m[1m✓[22m[39m Compiled in 15ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 175ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 223ms
+ [32m[1m✓[22m[39m Compiled in 11ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 165ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 229ms
+ [32m[1m✓[22m[39m Compiled in 13ms
+ [32m[1m✓[22m[39m Compiled in 11ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 160ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 226ms
+ [32m[1m✓[22m[39m Compiled in 14ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 155ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 219ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 92ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 240ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 198ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 252ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 87ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 236ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 64ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 225ms
+ [32m[1m✓[22m[39m Compiled in 48ms
+ [32m[1m✓[22m[39m Compiled in 14ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 157ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 231ms
+ [32m[1m✓[22m[39m Compiled in 15ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 153ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 237ms
+ [32m[1m✓[22m[39m Compiled in 10ms
+ [32m[1m✓[22m[39m Compiled in 17ms
+ [32m[1m✓[22m[39m Compiled in 13ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 201ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 234ms
+ [32m[1m✓[22m[39m Compiled in 12ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 159ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 233ms
+ [32m[1m✓[22m[39m Compiled in 11ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 127ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 244ms
+ [32m[1m✓[22m[39m Compiled in 12ms
+ [32m[1m✓[22m[39m Compiled in 15ms
+ [32m[1m✓[22m[39m Compiled in 12ms
+ [32m[1m✓[22m[39m Compiled in 18ms
+ [32m[1m✓[22m[39m Compiled in 15ms
+ [32m[1m✓[22m[39m Compiled in 14ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 182ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 233ms
+ [32m[1m✓[22m[39m Compiled in 16ms
+ [32m[1m✓[22m[39m Compiled in 12ms
+ [32m[1m✓[22m[39m Compiled in 16ms
+ [32m[1m✓[22m[39m Compiled in 12ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 185ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 253ms
+ [32m[1m✓[22m[39m Compiled in 14ms
+ [32m[1m✓[22m[39m Compiled in 11ms
+ [32m[1m✓[22m[39m Compiled in 39ms
+ [32m[1m✓[22m[39m Compiled in 13ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 159ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 225ms
+ [32m[1m✓[22m[39m Compiled in 40ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 178ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 228ms
+ [32m[1m✓[22m[39m Compiled /login in 9ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 52ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 228ms
+ GET /favicon.ico?favicon.1ff1bb9a.ico [32m200[39m in 228ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 116ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 224ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 41ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico?favicon.1ff1bb9a.ico [32m200[39m in 229ms
+ GET /favicon.ico [32m200[39m in 232ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 30ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 26ms
+ GET /favicon.ico?favicon.1ff1bb9a.ico [32m200[39m in 231ms
+ GET /favicon.ico [32m200[39m in 231ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 225ms
+ GET /favicon.ico?favicon.1ff1bb9a.ico [32m200[39m in 227ms
+ [32m[1m✓[22m[39m Compiled in 11ms
+ [32m[1m✓[22m[39m Compiled in 21ms
+ [32m[1m✓[22m[39m Compiled in 16ms
+ [32m[1m✓[22m[39m Compiled in 14ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /api/auth/providers [32m200[39m in 252ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /api/auth/csrf [32m200[39m in 224ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ POST /api/auth/callback/credentials [33m401[39m in 221ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /api/auth/providers [32m200[39m in 244ms
  [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
 Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
 The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
@@ -53,17 +1134,82 @@ Exports made by CommonJs syntax will lead to a runtime error, since the module i
 CRED {
   redirect: [32m'false'[39m,
   email: [32m'test@gmail.com'[39m,
-  password: [32m'test@123'[39m,
-  csrfToken: [32m'f15231a6d8dec89ddc2190de84a0ed6d83c2b7162a55f4d37b1a3b4e68e4e7a5'[39m,
-  callbackUrl: [32m'http://localhost:3000/login'[39m,
+  password: [32m'test123'[39m,
+  callbackUrl: [32m'/'[39m,
+  csrfToken: [32m'c10f5e067572c995b9f942b8ea782acf1a7a6bc41abd6aa2e8db62a1f83cf3c5'[39m,
   json: [32m'true'[39m
 }
-RESPONSE: {
-  message: [32m'Cannot POST /api/api/auth/login'[39m,
-  error: [32m'Not Found'[39m,
-  statusCode: [33m404[39m
+ POST /api/auth/callback/credentials [32m200[39m in 449ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 20ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 231ms
+ GET /favicon.ico?favicon.1ff1bb9a.ico [32m200[39m in 232ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /api/auth/providers [32m200[39m in 247ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /api/auth/csrf [32m200[39m in 226ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+CRED {
+  redirect: [32m'false'[39m,
+  email: [32m'test@gmail.com'[39m,
+  password: [32m'test123s'[39m,
+  callbackUrl: [32m'/'[39m,
+  csrfToken: [32m'c10f5e067572c995b9f942b8ea782acf1a7a6bc41abd6aa2e8db62a1f83cf3c5'[39m,
+  json: [32m'true'[39m
 }
- POST /api/auth/callback/credentials [33m401[39m in 239ms
+ POST /api/auth/callback/credentials [33m401[39m in 430ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 70ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 225ms
  [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
 Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
 The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
@@ -86,60 +1232,49 @@ Exports made by CommonJs syntax will lead to a runtime error, since the module i
 
 CRED {
   redirect: [32m'false'[39m,
-  email: [32m'test@gmail.com'[39m,
-  password: [32m'test123'[39m,
-  csrfToken: [32m'f15231a6d8dec89ddc2190de84a0ed6d83c2b7162a55f4d37b1a3b4e68e4e7a5'[39m,
-  callbackUrl: [32m'http://localhost:3000/login'[39m,
+  email: [32m'sad'[39m,
+  password: [32m'asd'[39m,
+  callbackUrl: [32m'/'[39m,
+  csrfToken: [32m'c10f5e067572c995b9f942b8ea782acf1a7a6bc41abd6aa2e8db62a1f83cf3c5'[39m,
   json: [32m'true'[39m
 }
-RESPONSE: {
-  message: [32m'Cannot POST /api/api/auth/login'[39m,
-  error: [32m'Not Found'[39m,
-  statusCode: [33m404[39m
+ POST /api/auth/callback/credentials [33m401[39m in 223ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /api/auth/providers [32m200[39m in 251ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /api/auth/csrf [32m200[39m in 226ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+CRED {
+  redirect: [32m'false'[39m,
+  email: [32m'sad'[39m,
+  password: [32m'asdasdd'[39m,
+  callbackUrl: [32m'/'[39m,
+  csrfToken: [32m'c10f5e067572c995b9f942b8ea782acf1a7a6bc41abd6aa2e8db62a1f83cf3c5'[39m,
+  json: [32m'true'[39m
 }
- POST /api/auth/callback/credentials [33m401[39m in 222ms
+ POST /api/auth/callback/credentials [33m401[39m in 223ms
  [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
 Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
 The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
 Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
 
 
- GET /login [32m200[39m in 50ms
- [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
-Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
-The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
-Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
-
-
- GET /login [32m200[39m in 67ms
- [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
-Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
-The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
-Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
-
-
- [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
-Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
-The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
-Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
-
-
- GET /login [32m200[39m in 173ms
- [32m[1m✓[22m[39m Compiled /favicon.ico in 80ms
- [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
-Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
-The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
-Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
-
-
- GET /favicon.ico?favicon.0b3bf435.ico [32m200[39m in 317ms
- [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
-Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
-The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
-Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
-
-
- GET /api/auth/providers [32m200[39m in 248ms
+ GET /api/auth/providers [32m200[39m in 249ms
  [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
 Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
 The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
@@ -155,29 +1290,174 @@ Exports made by CommonJs syntax will lead to a runtime error, since the module i
 
 CRED {
   redirect: [32m'false'[39m,
-  email: [32m'test@gmail.com'[39m,
-  password: [32m'test123'[39m,
-  csrfToken: [32m'f15231a6d8dec89ddc2190de84a0ed6d83c2b7162a55f4d37b1a3b4e68e4e7a5'[39m,
-  callbackUrl: [32m'http://localhost:3000/login'[39m,
+  email: [32m'sad@gmail.com'[39m,
+  password: [32m'asdasddasd'[39m,
+  callbackUrl: [32m'/'[39m,
+  csrfToken: [32m'c10f5e067572c995b9f942b8ea782acf1a7a6bc41abd6aa2e8db62a1f83cf3c5'[39m,
   json: [32m'true'[39m
 }
-RESPONSE: {
-  message: [32m'Cannot POST /api/api/auth/login'[39m,
-  error: [32m'Not Found'[39m,
-  statusCode: [33m404[39m
-}
- POST /api/auth/callback/credentials [33m401[39m in 233ms
+ POST /api/auth/callback/credentials [33m401[39m in 223ms
  [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
 Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
 The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
 Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
 
 
-[next-auth][warn][NEXTAUTH_URL] 
-https://next-auth.js.org/warnings#nextauth_url
-[next-auth][warn][NO_SECRET] 
-https://next-auth.js.org/warnings#no_secret
- GET /api/auth/providers [32m200[39m in 274ms
+ GET /login [32m200[39m in 73ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 50ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico?favicon.1ff1bb9a.ico [32m200[39m in 251ms
+ GET /favicon.ico [32m200[39m in 226ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /api/auth/providers [32m200[39m in 246ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /api/auth/csrf [32m200[39m in 227ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+CRED {
+  redirect: [32m'false'[39m,
+  email: [32m'sad@gmail.com'[39m,
+  password: [32m'asdasfsdgsgsd'[39m,
+  callbackUrl: [32m'/'[39m,
+  csrfToken: [32m'c10f5e067572c995b9f942b8ea782acf1a7a6bc41abd6aa2e8db62a1f83cf3c5'[39m,
+  json: [32m'true'[39m
+}
+ POST /api/auth/callback/credentials [33m401[39m in 229ms
+ [32m[1m✓[22m[39m Compiled in 47ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 154ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 220ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /api/auth/providers [32m200[39m in 246ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /api/auth/csrf [32m200[39m in 224ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+CRED {
+  redirect: [32m'false'[39m,
+  email: [32m'asd@gmail.com'[39m,
+  password: [32m'ssafdsf'[39m,
+  callbackUrl: [32m'/'[39m,
+  csrfToken: [32m'c10f5e067572c995b9f942b8ea782acf1a7a6bc41abd6aa2e8db62a1f83cf3c5'[39m,
+  json: [32m'true'[39m
+}
+ POST /api/auth/callback/credentials [33m401[39m in 224ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /api/auth/providers [32m200[39m in 244ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /api/auth/csrf [32m200[39m in 235ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+CRED {
+  redirect: [32m'false'[39m,
+  email: [32m'test@gmail.com'[39m,
+  password: [32m'test'[39m,
+  callbackUrl: [32m'/'[39m,
+  csrfToken: [32m'c10f5e067572c995b9f942b8ea782acf1a7a6bc41abd6aa2e8db62a1f83cf3c5'[39m,
+  json: [32m'true'[39m
+}
+ POST /api/auth/callback/credentials [33m401[39m in 419ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /api/auth/providers [32m200[39m in 248ms
  [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
 Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
 The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
@@ -195,37 +1475,34 @@ CRED {
   redirect: [32m'false'[39m,
   email: [32m'test@gmail.com'[39m,
   password: [32m'test123'[39m,
-  csrfToken: [32m'f15231a6d8dec89ddc2190de84a0ed6d83c2b7162a55f4d37b1a3b4e68e4e7a5'[39m,
-  callbackUrl: [32m'http://localhost:3000/login'[39m,
+  callbackUrl: [32m'/'[39m,
+  csrfToken: [32m'c10f5e067572c995b9f942b8ea782acf1a7a6bc41abd6aa2e8db62a1f83cf3c5'[39m,
   json: [32m'true'[39m
 }
-RESPONSE: {
-  user: {
-    id: [32m'cmfz7dhy000000k2isr2wxepu'[39m,
-    email: [32m'test@gmail.com'[39m,
-    name: [32m'Admin'[39m,
-    role: [32m'ADMIN'[39m,
-    isActive: [33mtrue[39m,
-    createdAt: [32m'2025-09-25T09:20:48.407Z'[39m,
-    updatedAt: [32m'2025-09-25T09:20:48.407Z'[39m
-  },
-  accessToken: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbWZ6N2RoeTAwMDAwMGsyaXNyMnd4ZXB1IiwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc1ODc5NDI1MCwiZXhwIjoxNzU5Mzk5MDUwfQ.77rSbbMPGhfk2yYE01Hkcwr1572NAfG7-bwGgIApQ5Y'[39m
-}
- POST /api/auth/callback/credentials [32m200[39m in 432ms
+ POST /api/auth/callback/credentials [32m200[39m in 428ms
  [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
 Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
 The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
 Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
 
 
- GET /login [32m200[39m in 34ms
+ GET /login [32m200[39m in 24ms
  [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
 Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
 The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
 Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
 
 
- GET /login [32m200[39m in 101ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico?favicon.1ff1bb9a.ico [32m200[39m in 227ms
+ GET /favicon.ico [32m200[39m in 228ms
+ [32m[1m✓[22m[39m Compiled in 14ms
+ [32m[1m✓[22m[39m Compiled in 12ms
  [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
 Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
 The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
@@ -236,40 +1513,7 @@ Exports made by CommonJs syntax will lead to a runtime error, since the module i
 https://next-auth.js.org/warnings#nextauth_url
 [next-auth][warn][NO_SECRET] 
 https://next-auth.js.org/warnings#no_secret
- GET /api/auth/providers [32m200[39m in 263ms
- [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
-Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
-The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
-Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
-
-
- GET /api/auth/csrf [32m200[39m in 239ms
- [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
-Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
-The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
-Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
-
-
-CRED {
-  redirect: [32m'false'[39m,
-  email: [32m'test@gmail.com'[39m,
-  password: [32m'test123'[39m,
-  csrfToken: [32m'f15231a6d8dec89ddc2190de84a0ed6d83c2b7162a55f4d37b1a3b4e68e4e7a5'[39m,
-  callbackUrl: [32m'http://localhost:3000/login'[39m,
-  json: [32m'true'[39m
-}
- POST /api/auth/callback/credentials [33m401[39m in 424ms
- [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
-Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
-The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
-Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
-
-
-[next-auth][warn][NEXTAUTH_URL] 
-https://next-auth.js.org/warnings#nextauth_url
-[next-auth][warn][NO_SECRET] 
-https://next-auth.js.org/warnings#no_secret
- GET /api/auth/providers [32m200[39m in 262ms
+ GET /api/auth/providers [32m200[39m in 298ms
  [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
 Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
 The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
@@ -287,15 +1531,143 @@ CRED {
   redirect: [32m'false'[39m,
   email: [32m'test@gmail.com'[39m,
   password: [32m'test123'[39m,
-  csrfToken: [32m'f15231a6d8dec89ddc2190de84a0ed6d83c2b7162a55f4d37b1a3b4e68e4e7a5'[39m,
-  callbackUrl: [32m'http://localhost:3000/login'[39m,
+  callbackUrl: [32m'/'[39m,
+  csrfToken: [32m'c10f5e067572c995b9f942b8ea782acf1a7a6bc41abd6aa2e8db62a1f83cf3c5'[39m,
   json: [32m'true'[39m
 }
- POST /api/auth/callback/credentials [32m200[39m in 423ms
+ POST /api/auth/callback/credentials [32m200[39m in 529ms
  [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
 Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
 The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
 Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
 
 
- GET /login [32m200[39m in 32ms
+ GET /login [32m200[39m in 74ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 228ms
+ GET /favicon.ico?favicon.1ff1bb9a.ico [32m200[39m in 230ms
+ [32m[1m✓[22m[39m Compiled in 23ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /api/auth/providers [32m200[39m in 247ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /api/auth/csrf [32m200[39m in 225ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+CRED {
+  redirect: [32m'false'[39m,
+  email: [32m'test@gmail.com'[39m,
+  password: [32m'test123'[39m,
+  callbackUrl: [32m'/Dashboard'[39m,
+  csrfToken: [32m'c10f5e067572c995b9f942b8ea782acf1a7a6bc41abd6aa2e8db62a1f83cf3c5'[39m,
+  json: [32m'true'[39m
+}
+ POST /api/auth/callback/credentials [32m200[39m in 426ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 58ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico [32m200[39m in 232ms
+ GET /favicon.ico?favicon.1ff1bb9a.ico [32m200[39m in 235ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /api/auth/providers [32m200[39m in 246ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /api/auth/csrf [32m200[39m in 226ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+CRED {
+  redirect: [32m'false'[39m,
+  email: [32m'test@gmail.com'[39m,
+  password: [32m'test123'[39m,
+  callbackUrl: [32m'/Dashboard'[39m,
+  csrfToken: [32m'c10f5e067572c995b9f942b8ea782acf1a7a6bc41abd6aa2e8db62a1f83cf3c5'[39m,
+  json: [32m'true'[39m
+}
+ POST /api/auth/callback/credentials [32m200[39m in 432ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 21ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /favicon.ico?favicon.1ff1bb9a.ico [32m200[39m in 230ms
+ GET /favicon.ico [32m200[39m in 232ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
+ GET /login [32m200[39m in 142ms
+ [33m[1m⚠[22m[39m ./apps/web/tailwind.config.js
+Specified module format (EcmaScript Modules) is not matching the module format of the source code (CommonJs)
+The EcmaScript module format was specified in the package.json that is affecting this source file or by using an special extension, but it looks like that CommonJs syntax is used in the source code.
+Exports made by CommonJs syntax will lead to a runtime error, since the module is in EcmaScript mode. Either change the "type" field in the package.json or replace CommonJs syntax with EcmaScript import/export syntax in the source file.
+
+
