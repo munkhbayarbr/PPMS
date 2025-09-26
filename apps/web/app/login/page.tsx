@@ -12,7 +12,7 @@ import { Eye, EyeOff, Loader2, LogIn } from "lucide-react";
 export default function LoginPage() {
   const router = useRouter();
   const params = useSearchParams();
-  const callbackUrl = params.get("callbackUrl") || "/Dashboard";
+  const callbackUrl = params.get("callbackUrl") || "/";
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -130,7 +130,7 @@ export default function LoginPage() {
               type="button"
               variant="outline"
               className="w-full mt-2"
-              onClick={() => router.push("/register")}
+              onClick={() => router.push("/login/register")}
             >
               Бүртгүүлэх
             </Button>

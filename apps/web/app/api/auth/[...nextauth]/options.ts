@@ -12,7 +12,7 @@ export const authOptions: NextAuthOptions = {
       },
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) return null;
-        console.log('CRED',credentials)
+
         const res = await fetch(`${process.env.BACKEND_BASE}/auth/login`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -22,37 +22,45 @@ export const authOptions: NextAuthOptions = {
           }),
         });
 
+
+        if (!res.ok) return null;
+
         const data = await res.json();
+
         return {
-          id: data.user.id as string,
-          email: data.user.email as string,
-          role: data.user.role as string,
-          accessToken: data.access_token as string,
-        };
+          id: String(data.user.id),
+          email: data.user.email,
+          role: data.user.role,
+          accessToken: data.access_token,
+          name: data.user.name ?? data.user.email,
+        } as any;
       },
     }),
   ],
-  session: {
-    strategy: "jwt",
-  },
+  session: { strategy: "jwt" },
   callbacks: {
     async jwt({ token, user }) {
-      // On first sign in, copy from user → token
       if (user) {
-        token.accessToken = (user as any).accessToken;
+        token.id = (user as any).id;
         token.role = (user as any).role;
+        token.accessToken = (user as any).accessToken;
       }
       return token;
     },
     async session({ session, token }) {
-      // Expose token data on the session
-      if (session.user) {
-        session.user.id = token.sub as string;
-        session.user.role = token.role as string | undefined;
-      }
-      session.accessToken = token.accessToken as string | undefined;
+      // session.user-г өргөтгөх (клиентэд хэрэгтэй бол)
+      session.user = {
+        ...session.user,
+        id: token.id as string,
+        role: (token.role as string) || "user",
+      } as any;
+      (session as any).accessToken = token.accessToken as string | undefined;
       return session;
     },
   },
+  pages: {
+    signIn: "/login", // invalid үед NextAuth энд буцаана
+  },
   secret: process.env.NEXTAUTH_SECRET,
+  // debug: process.env.NODE_ENV === "development",
 };
