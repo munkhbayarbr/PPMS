@@ -1,28 +1,25 @@
-import { Body, Controller, HttpCode, Post, Request, UseGuards } from '@nestjs/common';
+import { Body, Controller, HttpCode, Post, UseGuards } from '@nestjs/common';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { AuthService } from './auth.service';
-import { LocalAuthGuard } from './local-auth.guard';
 import { LoginDto, RegisterDto } from './dtos';
-import { UsersService } from '../users/users.service';
+
 
 @ApiTags('auth')
 @Controller('auth')
 export class AuthController {
-  constructor(
-    private auth: AuthService,
-    private users: UsersService,
-  ) {}
-
-  @UseGuards(LocalAuthGuard)
-  @Post('login')
-  @HttpCode(200)
-  async login(@Body() _: LoginDto, @Request() req: any) {
-    return this.auth.login(req.user); // req.user comes from LocalStrategy.validate
-  }
+  constructor(private auth: AuthService) {}
 
   @Post('register')
   async register(@Body() dto: RegisterDto) {
-    const user = await this.users.create(dto);
-    return user;
+    return this.auth.register(dto);
+  }
+
+  @HttpCode(200)
+  @Post('login')
+  async login(@Body() dto: LoginDto, /* req injected by guard */) {
+
+    const user = await this.auth.validateUser(dto.email, dto.password);
+    if (!user) return 
+    return this.auth.login({ id: user.id, email: user.email, role: user.role });
   }
 }

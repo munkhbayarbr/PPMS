@@ -1,44 +1,49 @@
-// src/users/users.service.ts
-import { Injectable, ConflictException, BadRequestException } from '@nestjs/common';
+import { Injectable, ConflictException, NotFoundException } from '@nestjs/common';
 import { PrismaService } from '../../prisma/prisma.service';
-import * as bcrypt from 'bcrypt'; // ok if you installed `bcrypt` (native). Otherwise use 'bcryptjs'.
+import { Prisma, Role } from '@prisma/client';
+import * as bcrypt from 'bcrypt';
 
 @Injectable()
 export class UsersService {
   constructor(private prisma: PrismaService) {}
 
-  async findByEmail(email: string) {
-    if (!email) return null;
+  findByEmail(email: string) {
     return this.prisma.user.findUnique({ where: { email } });
   }
 
-  async create(data: { email: string; password: string; name?: string }) {
-    if (!data?.email) throw new BadRequestException('Email is required');
-    if (!data?.password) throw new BadRequestException('Password is required');
-
+  async create(data: { email: string; password: string; name?: string; role?: Role }) {
     const exists = await this.findByEmail(data.email);
     if (exists) throw new ConflictException('Email already in use');
 
     const hash = await bcrypt.hash(data.password, 12);
-    try {
-      return this.prisma.user.create({
-        data: { email: data.email, password: hash, name: data.name ?? null },
-        select: {
-          id: true,
-          email: true,
-          name: true,
-          role: true,
-          isActive: true,
-          createdAt: true,
-        },
-      });
-    } catch (e: any) {
-      if (e?.code === 'P2002') throw new ConflictException('Email already in use');
-      throw e;
-    }
+
+    const user = await this.prisma.user.create({
+      data: {
+        email: data.email,
+        name: data.name,
+        password: hash,
+        role: data.role ?? Role.WORKER, // default aligns with schema
+      },
+      select: {
+        id: true,
+        email: true,
+        name: true,
+        role: true,
+        isActive: true,
+        createdAt: true,
+      },
+    });
+
+    return user;
   }
 
   async validatePassword(plain: string, hash: string) {
     return bcrypt.compare(plain, hash);
+  }
+
+  async mustGetById(id: string) {
+    const u = await this.prisma.user.findUnique({ where: { id } });
+    if (!u) throw new NotFoundException('User not found');
+    return u;
   }
 }

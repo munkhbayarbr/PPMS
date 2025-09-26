@@ -1,34 +1,32 @@
 import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { UsersService } from '../users/users.service';
+import * as bcrypt from 'bcrypt';
 
 @Injectable()
 export class AuthService {
-  constructor(
-    private users: UsersService,
-    private jwt: JwtService,
-  ) {}
+  constructor(private users: UsersService, private jwt: JwtService) {}
 
   async validateUser(email: string, password: string) {
     const user = await this.users.findByEmail(email);
-    if (!user || !user.isActive)
-      throw new UnauthorizedException('Invalid credentials');
-
-    const ok = await this.users.validatePassword(password, user.password);
-    if (!ok) throw new UnauthorizedException('Invalid credentials');
-
-    // strip password
-    const { password: _pw, ...safe } = user;
-    return safe;
+    if (!user) return null;
+    const ok = await bcrypt.compare(password, user.password);
+    if (!ok) return null;
+    return user;
   }
 
- async login(user: { id: string; email: string; role: string }) {
-  const payload = { sub: user.id, email: user.email, role: user.role };
-  const accessToken = await this.jwt.signAsync(payload);
+  async login(user: { id: string; email: string; role: string }) {
+    const payload = { sub: user.id, email: user.email, role: user.role };
+    return {
+      access_token: await this.jwt.signAsync(payload),
+      user: { id: user.id, email: user.email, role: user.role },
+    };
+  }
 
-  return {
-    user,
-    accessToken,
-  };
-}
+  async register(data: { email: string; password: string; name?: string; role?: any }) {
+    const created = await this.users.create(data);
+    // login immediately after register (optional)
+    const token = await this.jwt.signAsync({ sub: created.id, email: created.email, role: created.role });
+    return { access_token: token, user: created };
+  }
 }

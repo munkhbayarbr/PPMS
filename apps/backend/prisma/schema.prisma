@@ -8,192 +8,366 @@ datasource db {
   shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
 }
 
-enum Role {
-  ADMIN
-  MANAGER
-  WORKER
-}
-
-enum OrderStatus {
-  DRAFT
-  IN_PROGRESS
-  COMPLETED
-  SHIPPED
-  CANCELLED
-}
-
-enum BatchStatus {
-  QUEUED
-  RUNNING
-  DONE
-  HOLD
-}
-
-enum StageType {
-  RECEIVE
-  DYE
-  MIX
-  COMB
-  SPIN
-  WIND
-  DOUBLE
-  TWIST
-}
+// ---------- Reference & Auth ----------
 
 model User {
   id        String   @id @default(cuid())
   email     String   @unique
   name      String?
-  role      Role     @default(WORKER)
   password  String
   isActive  Boolean  @default(true)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  auditLogs    AuditLog[]
-  operatedRuns StageRun[] @relation("UserOperator")
+  // Roles (ERD: employee_role)
+  employeeRoles EmployeeRole[]
+
+  // App usage
+  auditLogs   AuditLog[]
+  // Operators in stages
+  p1Stocks    P1Stock[]    @relation("P1Operator")
+  p2Dyeings   P2Dyeing[]   @relation("P2Operator")
+  p2Blendings P2Blending[] @relation("P2BOperator")
+  p3Cardings  P3Carding[]  @relation("P3Operator")
+  p4Spinnings P4Spinning[] @relation("P4Operator")
+  p5Windings  P5Winding[]  @relation("P5Operator")
+  p6Doublings P6Doubling[] @relation("P6Operator")
+  p7Twistings P7Twisting[] @relation("P7Operator")
 }
 
-model WarehouseItem {
-  id            String   @id @default(cuid())
-  code          String   @unique
-  rawWeightKg   Decimal
-  moisturePct   Decimal?
-  cleanWeightKg Decimal
-  location      String?
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
+model Role {
+  id     String  @id @default(cuid())
+  nameEn String  @unique
+  nameMn String?
 
-  allocations OrderAllocation[]
-  batchInputs Batch[]           @relation("WarehouseItemToBatch")
-
-  @@index([code])
+  employees EmployeeRole[]
 }
+
+model EmployeeRole {
+  id     String @id @default(cuid())
+  userId String
+  roleId String
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  role Role @relation(fields: [roleId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, roleId])
+}
+
+// Optional: ERD “factory_process” lookup (names of processes)
+model FactoryProcess {
+  id     String  @id @default(cuid())
+  nameEn String  @unique
+  nameMn String?
+  abbre  String?
+}
+
+// ---------- Customer ----------
 
 model Customer {
-  id        String   @id @default(cuid())
-  name      String
-  phone     String?
-  email     String?  @unique
-  address   String?
-  isActive  Boolean  @default(true)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id      String  @id @default(cuid())
+  name    String
+  abbName String?
+  email   String? @unique
+  mobile  String?
+  address String?
+  phone   String?
+  fax     String?
 
-  orders Order[]
+  // Relations
+  p1Stocks P1Stock[]
 
   @@index([name])
 }
 
-model Order {
-  id         String   @id @default(cuid())
-  customerId String
-  customer   Customer @relation(fields: [customerId], references: [id], onDelete: Restrict)
+// ---------- Static lookups from ERD ----------
 
-  productSpec String?
-  requestedKg Decimal
-  status      OrderStatus @default(DRAFT)
-  dueDate     DateTime?
-  createdAt   DateTime    @default(now())
-  updatedAt   DateTime    @updatedAt
+model FiberType {
+  id     String    @id @default(cuid()) // ERD: varchar
+  name   String    @unique
+  stocks P1Stock[]
+}
 
-  allocations OrderAllocation[]
-  shipment    Shipment?
+model FiberColor {
+  id     String    @id @default(cuid()) // ERD: varchar
+  name   String    @unique
+  stocks P1Stock[]
+}
 
-  @@index([status])
+// Bobbin type (ERD: bobbin)
+model Bobbin {
+  id     String  @id @default(cuid())
+  name   String  @unique
+  weight Decimal @db.Decimal(8, 3)
+}
+
+// Output color (ERD: out_color)
+model OutColor {
+  id         String       @id @default(cuid())
+  name       String       @unique
+  abbName    String?
+  P2Dyeing   P2Dyeing[]
+  P2Blending P2Blending[]
+}
+
+// ---------- P1: Raw material intake (stock_in / p1si) ----------
+
+model P1Stock {
+  id           String   @id @default(cuid())
+  customerId   String
+  orderAbb     String?
+  dateTime     DateTime @default(now())
+  userId       String // operator (ERD: employee_id)
+  fiberTypeId  String
+  fiberColorId String
+  baleNum      Int?
+  roughWeight  Decimal? @db.Decimal(12, 3)
+  baleWeight   Decimal? @db.Decimal(12, 3)
+  conWeight    Decimal? @db.Decimal(12, 3)
+  moisture     Decimal? @db.Decimal(6, 3)
+
+  // Relations
+  customer   Customer   @relation(fields: [customerId], references: [id], onDelete: Restrict)
+  operator   User       @relation("P1Operator", fields: [userId], references: [id], onDelete: Restrict)
+  fiberType  FiberType  @relation(fields: [fiberTypeId], references: [id], onDelete: Restrict)
+  fiberColor FiberColor @relation(fields: [fiberColorId], references: [id], onDelete: Restrict)
+
+  // Handoff to P2 dyeing
+  p1ToP2 P1ToP2[]
+
   @@index([customerId])
+  @@index([fiberTypeId])
+  @@index([fiberColorId])
+  @@index([dateTime])
 }
 
-model OrderAllocation {
-  id              String   @id @default(cuid())
-  orderId         String
-  warehouseItemId String
-  allocatedKg     Decimal
-  createdAt       DateTime @default(now())
+// ---------- P2: Dyeing + P2: Blending (both exist in ERD) ----------
 
-  order         Order         @relation(fields: [orderId], references: [id], onDelete: Cascade)
-  warehouseItem WarehouseItem @relation(fields: [warehouseItemId], references: [id], onDelete: Restrict)
+model P2Dyeing {
+  id            String   @id @default(cuid())
+  lotNum        String
+  colorId       String? // ERD: color (varchar*). Tie it to OutColor
+  dateTime      DateTime @default(now())
+  inRoughWeight Decimal? @db.Decimal(12, 3)
+  p2FiberWeight Decimal? @db.Decimal(12, 3)
+  p2Waste       Decimal? @db.Decimal(12, 3)
+  userId        String
 
-  @@unique([orderId, warehouseItemId])
+  color    OutColor? @relation(fields: [colorId], references: [id], onDelete: SetNull)
+  operator User      @relation("P2Operator", fields: [userId], references: [id], onDelete: Restrict)
+
+  // From P1
+  fromP1 P1ToP2[]
+  // To P3
+  toP3   P2ToP3[]
 }
 
-model StageDefinition {
-  id          String    @id @default(cuid())
-  name        String
-  type        StageType
-  capacityKgH Int?
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
+model P2Blending {
+  id            String   @id @default(cuid())
+  lotNum        String
+  colorId       String?
+  dateTime      DateTime @default(now())
+  inRoughWeight Decimal? @db.Decimal(12, 3)
+  p2FiberWeight Decimal? @db.Decimal(12, 3)
+  p2Waste       Decimal? @db.Decimal(12, 3)
+  userId        String
 
-  // self many-to-many
-  prerequisites StageDefinition[] @relation("StagePrereq")
-  requiredBy    StageDefinition[] @relation("StagePrereq")
+  color    OutColor? @relation(fields: [colorId], references: [id], onDelete: SetNull)
+  operator User      @relation("P2BOperator", fields: [userId], references: [id], onDelete: Restrict)
 
-  runs StageRun[]
-
-  @@unique([type])
+  // (Optional) If you also handoff from P2B to P3, add a join like P2BToP3
 }
 
-model Batch {
-  id           String      @id @default(cuid())
-  code         String      @unique
-  sourceItemId String?
-  totalInputKg Decimal
-  status       BatchStatus @default(QUEUED)
-  createdAt    DateTime    @default(now())
-  updatedAt    DateTime    @updatedAt
+// P1 -> P2 (join with taken_weight/moisture/confirmed weight, ERD p1si_p2db)
+model P1ToP2 {
+  id             String   @id @default(cuid())
+  p1Id           String
+  p2Id           String
+  takenWeight    Decimal? @db.Decimal(12, 3)
+  moisture       Decimal? @db.Decimal(6, 3)
+  takenWeightCon Decimal? @db.Decimal(12, 3)
+  roughWeight    Decimal? @db.Decimal(12, 3)
 
-  sourceItem      WarehouseItem? @relation("WarehouseItemToBatch", fields: [sourceItemId], references: [id])
-  runs            StageRun[]
-  lineageParentId String?
-  lineageParent   Batch?         @relation("BatchLineage", fields: [lineageParentId], references: [id])
-  lineageChildren Batch[]        @relation("BatchLineage")
+  p1 P1Stock  @relation(fields: [p1Id], references: [id], onDelete: Cascade)
+  p2 P2Dyeing @relation(fields: [p2Id], references: [id], onDelete: Cascade)
 
-  @@index([status])
+  @@unique([p1Id, p2Id])
+  @@index([p1Id])
+  @@index([p2Id])
 }
 
-model StageRun {
-  id          String    @id @default(cuid())
-  batchId     String
-  stageId     String
-  startedAt   DateTime  @default(now())
-  finishedAt  DateTime?
-  inputKg     Decimal
-  outputKg    Decimal?
-  wasteKg     Decimal?
-  qualityNote String?
-  operatorId  String?
+// ---------- P3: Carding ----------
 
-  batch    Batch           @relation(fields: [batchId], references: [id], onDelete: Cascade)
-  stage    StageDefinition @relation(fields: [stageId], references: [id], onDelete: Restrict)
-  operator User?           @relation("UserOperator", fields: [operatorId], references: [id])
-  wastes   WasteRecord[]
+model P3Carding {
+  id            String   @id @default(cuid())
+  lotNum        String
+  batchNum      Int?
+  dateTime      DateTime @default(now())
+  inRoughWeight Decimal? @db.Decimal(12, 3)
+  p3RovenWeight Decimal? @db.Decimal(12, 3)
+  p3Waste       Decimal? @db.Decimal(12, 3)
+  bobbinNum     Int?
+  userId        String
 
-  @@index([batchId, stageId])
+  operator User @relation("P3Operator", fields: [userId], references: [id], onDelete: Restrict)
+
+  // From P2 -> P3
+  fromP2 P2ToP3[]
+  // To P4
+  toP4   P3ToP4[]
 }
 
-model WasteRecord {
-  id         String   @id @default(cuid())
-  stageRunId String
-  kind       String
-  amountKg   Decimal
-  note       String?
-  createdAt  DateTime @default(now())
+// P2 -> P3 (handoff, ERD p2db_p3c)
+model P2ToP3 {
+  id             String   @id @default(cuid())
+  p2Id           String
+  p3Id           String
+  takenWeight    Decimal? @db.Decimal(12, 3)
+  moisture       Decimal? @db.Decimal(6, 3)
+  takenWeightCon Decimal? @db.Decimal(12, 3)
 
-  stageRun StageRun @relation(fields: [stageRunId], references: [id], onDelete: Cascade)
+  p2 P2Dyeing  @relation(fields: [p2Id], references: [id], onDelete: Cascade)
+  p3 P3Carding @relation(fields: [p3Id], references: [id], onDelete: Cascade)
 
-  @@index([stageRunId])
+  @@unique([p2Id, p3Id])
+  @@index([p2Id])
+  @@index([p3Id])
 }
 
-model Shipment {
-  id        String    @id @default(cuid())
-  orderId   String    @unique
-  shippedAt DateTime?
-  carrier   String?
-  docUrl    String?
+// ---------- P4: Spinning ----------
 
-  order Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+model P4Spinning {
+  id            String   @id @default(cuid())
+  lotNum        String
+  batchNum      Int?
+  dateTime      DateTime @default(now())
+  inRoughWeight Decimal? @db.Decimal(12, 3)
+  p4DanUtas     Decimal? @db.Decimal(12, 3) // single yarn
+  p4RovenWeight Decimal? @db.Decimal(12, 3)
+  p4Waste       Decimal? @db.Decimal(12, 3)
+  userId        String
+
+  operator User     @relation("P4Operator", fields: [userId], references: [id], onDelete: Restrict)
+  fromP3   P3ToP4[]
+  toP5     P4ToP5[]
 }
+
+// P3 -> P4 (handoff, ERD p3c_p4s)
+model P3ToP4 {
+  id             String   @id @default(cuid())
+  p3Id           String
+  p4Id           String
+  takenWeight    Decimal? @db.Decimal(12, 3)
+  moisture       Decimal? @db.Decimal(6, 3)
+  takenWeightCon Decimal? @db.Decimal(12, 3)
+
+  p3 P3Carding  @relation(fields: [p3Id], references: [id], onDelete: Cascade)
+  p4 P4Spinning @relation(fields: [p4Id], references: [id], onDelete: Cascade)
+
+  @@unique([p3Id, p4Id])
+  @@index([p3Id])
+  @@index([p4Id])
+}
+
+// ---------- P5: Winding ----------
+
+model P5Winding {
+  id            String   @id @default(cuid())
+  lotNum        String
+  batchNum      Int?
+  dateTime      DateTime @default(now())
+  inRoughWeight Decimal? @db.Decimal(12, 3)
+  p5OroosonUtas Decimal? @db.Decimal(12, 3) // wound yarn
+  userId        String
+
+  operator User     @relation("P5Operator", fields: [userId], references: [id], onDelete: Restrict)
+  fromP4   P4ToP5[]
+  toP6     P5ToP6[]
+}
+
+// P4 -> P5 (handoff, ERD p4s_p5w)
+model P4ToP5 {
+  id             String   @id @default(cuid())
+  p4Id           String
+  p5Id           String
+  takenWeight    Decimal? @db.Decimal(12, 3)
+  moisture       Decimal? @db.Decimal(6, 3)
+  takenWeightCon Decimal? @db.Decimal(12, 3)
+
+  p4 P4Spinning @relation(fields: [p4Id], references: [id], onDelete: Cascade)
+  p5 P5Winding  @relation(fields: [p5Id], references: [id], onDelete: Cascade)
+
+  @@unique([p4Id, p5Id])
+  @@index([p4Id])
+  @@index([p5Id])
+}
+
+// ---------- P6: Doubling ----------
+
+model P6Doubling {
+  id            String   @id @default(cuid())
+  lotNum        String
+  batchNum      Int?
+  dateTime      DateTime @default(now())
+  inRoughWeight Decimal? @db.Decimal(12, 3)
+  p5DavharUtas  Decimal? @db.Decimal(12, 3) // doubled yarn
+  userId        String
+
+  operator User     @relation("P6Operator", fields: [userId], references: [id], onDelete: Restrict)
+  fromP5   P5ToP6[]
+  toP7     P6ToP7[]
+}
+
+// P5 -> P6 (handoff, ERD p5w_p6d)
+model P5ToP6 {
+  id             String   @id @default(cuid())
+  p5Id           String
+  p6Id           String
+  takenWeight    Decimal? @db.Decimal(12, 3)
+  moisture       Decimal? @db.Decimal(6, 3)
+  takenWeightCon Decimal? @db.Decimal(12, 3)
+
+  p5 P5Winding  @relation(fields: [p5Id], references: [id], onDelete: Cascade)
+  p6 P6Doubling @relation(fields: [p6Id], references: [id], onDelete: Cascade)
+
+  @@unique([p5Id, p6Id])
+  @@index([p5Id])
+  @@index([p6Id])
+}
+
+// ---------- P7: Twisting ----------
+
+model P7Twisting {
+  id            String   @id @default(cuid())
+  lotNum        String
+  batchNum      Int?
+  dateTime      DateTime @default(now())
+  inRoughWeight Decimal? @db.Decimal(12, 3)
+  p5BelenUtas   Decimal? @db.Decimal(12, 3) // finished yarn
+  userId        String
+
+  operator User     @relation("P7Operator", fields: [userId], references: [id], onDelete: Restrict)
+  fromP6   P6ToP7[]
+}
+
+// P6 -> P7 (handoff, ERD p6d_p7t)
+model P6ToP7 {
+  id             String   @id @default(cuid())
+  p6Id           String
+  p7Id           String
+  takenWeight    Decimal? @db.Decimal(12, 3)
+  moisture       Decimal? @db.Decimal(6, 3)
+  takenWeightCon Decimal? @db.Decimal(12, 3)
+
+  p6 P6Doubling @relation(fields: [p6Id], references: [id], onDelete: Cascade)
+  p7 P7Twisting @relation(fields: [p7Id], references: [id], onDelete: Cascade)
+
+  @@unique([p6Id, p7Id])
+  @@index([p6Id])
+  @@index([p7Id])
+}
+
+// ---------- Cross-cutting (you already had these; keeping them) ----------
 
 model AuditLog {
   id        String   @id @default(cuid())
