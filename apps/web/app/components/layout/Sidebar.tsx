@@ -8,7 +8,7 @@ import { LayoutDashboard, ClipboardList, Package, Boxes, Users, BarChart2, Setti
 type NavItem = { href: string; label: string; icon: React.ElementType; };
 const nav: NavItem[] = [
   { href: "/dashboard", label: "Хянах самбар", icon: LayoutDashboard },
-  { href: "/orders",    label: "Захиалга",     icon: ClipboardList },
+  { href: "/Dashboard/orders",    label: "Захиалга",     icon: ClipboardList },
   { href: "/processes", label: "Процесс",      icon: Boxes },
   { href: "/products",  label: "Бүтээгдэхүүн", icon: Package },
   { href: "/employees", label: "Ажилчид",      icon: Users },
