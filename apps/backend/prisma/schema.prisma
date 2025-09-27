@@ -39,7 +39,6 @@ model Role {
   id     String  @id @default(cuid())
   nameEn String  @unique
   nameMn String?
-
   employees EmployeeRole[]
 }
 

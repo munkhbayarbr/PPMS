@@ -22,13 +22,11 @@ export class UsersService {
         email: data.email,
         name: data.name,
         password: hash,
-        role: data.role ?? Role.WORKER, // default aligns with schema
       },
       select: {
         id: true,
         email: true,
         name: true,
-        role: true,
         isActive: true,
         createdAt: true,
       },

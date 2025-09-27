@@ -6,7 +6,7 @@ export class RegisterDto {
   @ApiProperty() @IsEmail() email: string;
   @ApiProperty() @MinLength(6) password: string;
   @ApiProperty({ required: false }) @IsOptional() name?: string;
-  @ApiProperty({ enum: Role, required: false }) @IsOptional() @IsEnum(Role) role?: Role; // ADMIN/MANAGER/WORKER
+  // @ApiProperty({ enum: Role, required: false }) @IsOptional() @IsEnum(Role) role?: Role; // ADMIN/MANAGER/WORKER
 }
 
 export class LoginDto {

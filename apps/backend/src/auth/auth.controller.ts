@@ -20,6 +20,6 @@ export class AuthController {
 
     const user = await this.auth.validateUser(dto.email, dto.password);
     if (!user) return 
-    return this.auth.login({ id: user.id, email: user.email, role: user.role });
+    return this.auth.login({ id: user.id, email: user.email  });
   }
 }

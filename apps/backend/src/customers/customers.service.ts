@@ -23,7 +23,6 @@ export class CustomersService {
             ],
           }
         : undefined,
-      orderBy: { createdAt: 'desc' },
       skip,
       take,
     });
