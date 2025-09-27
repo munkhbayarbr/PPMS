@@ -14,6 +14,7 @@ const nav: NavItem[] = [
   { href: "/employees", label: "Ажилчид",      icon: Users },
   { href: "/reports",   label: "Тайлан",       icon: BarChart2 },
   { href: "/settings",  label: "Тохиргоо",     icon: Settings },
+  { href: "/Dashboard/customers",  label: "Үйлчлүүлэгчид",     icon: Users },
 ];
 
 export default function Sidebar() {
