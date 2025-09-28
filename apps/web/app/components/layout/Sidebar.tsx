@@ -35,6 +35,12 @@ const nav: NavItem[] = [
   { href: "/Dashboard/out-colors", label: "Out Colors", icon: Droplets },
   { href: "/Dashboard/p1", label: "P1 Intake", icon: Boxes },
   { href: "/Dashboard/p2-dyeing", label: "P2 Dyeing", icon: Droplets },
+  { href: "/Dashboard/p3-carding", label: "P3 Самнах", icon: Boxes },
+  { href: "/Dashboard/p4-spinning", label: "P4 Spinning", icon: Boxes },
+  { href: "/Dashboard/p5-winding", label: "P5 winding", icon: Boxes },
+  { href: "/Dashboard/p6-doubling", label: "P6 Doubling", icon: Boxes },
+  { href: "/Dashboard/p7-twisting", label: "P7 Twisting", icon: Boxes },
+
 ];
 
 export default function Sidebar() {
