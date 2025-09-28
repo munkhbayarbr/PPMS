@@ -1,22 +1,10 @@
+// customers.controller.ts
 import {
-  Controller,
-  Get,
-  Post,
-  Body,
-  Patch,
-  Param,
-  Delete,
-  Query,
-  DefaultValuePipe,
-  ParseIntPipe,
-  UseGuards,
+  Controller, Get, Post, Body, Patch, Param, Delete, Query,
+  DefaultValuePipe, ParseIntPipe, UseGuards,
 } from '@nestjs/common';
 import {
-  ApiOkResponse,
-  ApiCreatedResponse,
-  ApiTags,
-  ApiQuery,
-  ApiBearerAuth,
+  ApiOkResponse, ApiCreatedResponse, ApiTags, ApiQuery, ApiBearerAuth,
 } from '@nestjs/swagger';
 import { CustomersService } from './customers.service';
 import { CreateCustomerDto } from './dto/create-customer.dto';
@@ -24,7 +12,7 @@ import { UpdateCustomerDto } from './dto/update-customer.dto';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 
 @ApiTags('customers')
-@ApiBearerAuth() 
+@ApiBearerAuth()
 @UseGuards(JwtAuthGuard)
 @Controller('customers')
 export class CustomersController {
