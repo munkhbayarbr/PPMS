@@ -1,18 +1,18 @@
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
-import { IsUUID, IsInt, Min, IsOptional, IsNumber } from 'class-validator';
+import { IsUUID, IsInt, Min, IsOptional, IsNumber, IsString, IsNotEmpty } from 'class-validator';
 import { Type } from 'class-transformer';
 
 export class CreateP1StockDto {
   @ApiProperty({ description: 'Customer ID (uuid)' })
-  @IsUUID()
+    @IsString() @IsNotEmpty()
   customerId!: string;
 
   @ApiProperty({ description: 'FiberType ID (uuid)' })
-  @IsUUID()
+  @IsString() @IsNotEmpty()
   fiberTypeId!: string;
 
   @ApiProperty({ description: 'FiberColor ID (uuid)' })
-  @IsUUID()
+  @IsString() @IsNotEmpty()
   fiberColorId!: string;
 
   @ApiProperty({ example: 12 })
@@ -46,7 +46,7 @@ export class CreateP1StockDto {
   moisture?: number;
 
  @ApiProperty()
-  @IsUUID()
+  @IsString() @IsNotEmpty()
   userId!: string;   // <-- NEW, required
 
   // If your schema has dateTime (timestamp), you can allow client to send it, otherwise omit this:
