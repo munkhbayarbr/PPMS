@@ -22,11 +22,9 @@ type NavItem = { href: string; label: string; icon: React.ElementType };
 const nav: NavItem[] = [
   { href: "/Dashboard", label: "Хянах самбар", icon: LayoutDashboard },
   { href: "/Dashboard/orders", label: "Захиалга", icon: ClipboardList },
-  { href: "/processes", label: "Процесс", icon: Boxes },
-  { href: "/products", label: "Бүтээгдэхүүн", icon: Package },
-  { href: "/employees", label: "Ажилчид", icon: Users },
+  { href: "/Dashboard/employees", label: "Ажилчид", icon: Users },
   { href: "/Dashboard/reports", label: "Тайлан", icon: BarChart2 },
-  { href: "/settings", label: "Тохиргоо", icon: Settings },
+  // { href: "/settings", label: "Тохиргоо", icon: Settings },
   { href: "/Dashboard/customers", label: "Үйлчлүүлэгчид", icon: UserCircle },
 
   // --- NEW LOOKUPS & PROCESSES ---
