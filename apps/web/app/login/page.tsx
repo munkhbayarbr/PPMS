@@ -46,7 +46,6 @@ export default function LoginPage() {
 
     setLoading(true);
     try {
-      // Persist or clear remembered email
       try {
         if (remember) localStorage.setItem("ppms_last_email", email);
         else localStorage.removeItem("ppms_last_email");

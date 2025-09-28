@@ -8,7 +8,6 @@ datasource db {
   shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
 }
 
-
 // ---------- Reference & Auth ----------
 
 model User {

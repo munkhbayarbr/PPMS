@@ -1,19 +1,18 @@
-import { PrismaClient } from '@prisma/client';
-const prisma = new PrismaClient();
+// // import { PrismaClient } from '@prisma/client';
+// // const prisma = new PrismaClient();
 
-async function main() {
-  const roles = ['admin','manager','operator','viewer'];
-  for (const nameEn of roles) {
-    await prisma.role.upsert({
-      where: { nameEn },
-      update: {},
-      create: { nameEn },
-    });
-  }
-  console.log('Seeded roles:', roles.join(', '));
-}
-main().finally(()=>prisma.$disconnect());
-
+// // async function main() {
+// //   const roles = ['admin', 'manager', 'operator', 'viewer'];
+// //   for (const nameEn of roles) {
+// //     await prisma.role.upsert({
+// //       where: { nameEn },
+// //       update: {},
+// //       create: { nameEn },
+// //     });
+// //   }
+// //   console.log('Seeded roles:', roles.join(', '));
+// // }
+// // main().finally(() => prisma.$disconnect());
 
 // import { PrismaClient, Role } from '@prisma/client';
 // import * as bcrypt from 'bcrypt';
