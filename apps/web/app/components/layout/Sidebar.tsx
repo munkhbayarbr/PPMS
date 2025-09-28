@@ -20,12 +20,12 @@ import {
 type NavItem = { href: string; label: string; icon: React.ElementType };
 
 const nav: NavItem[] = [
-  { href: "/dashboard", label: "Хянах самбар", icon: LayoutDashboard },
+  { href: "/Dashboard", label: "Хянах самбар", icon: LayoutDashboard },
   { href: "/Dashboard/orders", label: "Захиалга", icon: ClipboardList },
   { href: "/processes", label: "Процесс", icon: Boxes },
   { href: "/products", label: "Бүтээгдэхүүн", icon: Package },
   { href: "/employees", label: "Ажилчид", icon: Users },
-  { href: "/reports", label: "Тайлан", icon: BarChart2 },
+  { href: "/Dashboard/reports", label: "Тайлан", icon: BarChart2 },
   { href: "/settings", label: "Тохиргоо", icon: Settings },
   { href: "/Dashboard/customers", label: "Үйлчлүүлэгчид", icon: UserCircle },
 
@@ -40,6 +40,11 @@ const nav: NavItem[] = [
   { href: "/Dashboard/p5-winding", label: "P5 winding", icon: Boxes },
   { href: "/Dashboard/p6-doubling", label: "P6 Doubling", icon: Boxes },
   { href: "/Dashboard/p7-twisting", label: "P7 Twisting", icon: Boxes },
+  { href: "/Dashboard/factory-process", label: "Процесс нэршил", icon: Settings },
+  { href: "/Dashboard/bobbins", label: "Боббин", icon: Package },
+
+
+
 
 ];
 
