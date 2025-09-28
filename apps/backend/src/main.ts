@@ -27,8 +27,15 @@ async function bootstrap() {
     )
     .build();
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('swagger', app, document);
-
+   SwaggerModule.setup('swagger', app, document, {
+    swaggerOptions: {
+      // tell the UI where to fetch the JSON (optional but nice to have)
+      url: '/swagger-json',
+      persistAuthorization: true,
+    },
+  });
+  const http = app.getHttpAdapter().getInstance(); // Express app
+  http.get('/swagger-json', (_req, res) => res.json(document));
   await app.listen(process.env.PORT!);
 }
 bootstrap();

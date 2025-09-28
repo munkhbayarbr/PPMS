@@ -30,6 +30,10 @@ import { P2BlendingModule } from './p2-blending/p2-blending.module';
 import { TraceModule } from './trace/trace.module';
 import { ReportsModule } from './reports/reports.module';
 
+import { EmployeeRolesModule } from './employee-roles/employee-roles.module';
+import { RolesModule } from './roles/roles.module';
+import { RolesController } from './roles/roles.controller';
+
 @Module({
   imports: [
     PrismaModule,
@@ -57,6 +61,9 @@ import { ReportsModule } from './reports/reports.module';
     P2BlendingModule,
     TraceModule,
     ReportsModule,
+    RolesModule,
+    EmployeeRolesModule,
   ],
+  controllers: [RolesController],
 })
 export class AppModule {}
