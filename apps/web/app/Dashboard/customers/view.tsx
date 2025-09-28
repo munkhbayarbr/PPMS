@@ -26,7 +26,7 @@ type Customer = {
 const fetcher = (url: string) => apiFetch<Customer[]>(url);
 
 export default function CustomersView() {
-  // list params
+  // жагсаалтын параметрүүд
   const [q, setQ] = useState("");
   const [take, setTake] = useState(20);
   const [page, setPage] = useState(0);
@@ -43,7 +43,7 @@ export default function CustomersView() {
 
   const { data, isLoading, mutate, error } = useSWR<Customer[]>(key, fetcher);
 
-  // modal + form state
+  // модал + формын төлөв
   const [open, setOpen] = useState(false);
   const empty: Partial<Customer> = { name: "" };
   const [form, setForm] = useState<Partial<Customer>>(empty);
@@ -57,7 +57,7 @@ export default function CustomersView() {
 
   const onSubmit = async () => {
     try {
-      if (!form.name?.trim()) return toast.error("Name is required");
+      if (!form.name?.trim()) return toast.error("Нэр заавал бөглөнө үү");
 
       const payload = {
         name: form.name,
@@ -74,25 +74,23 @@ export default function CustomersView() {
           method: "PATCH",
           body: JSON.stringify(payload),
         });
-        toast.success("Customer updated.");
+        toast.success("Харилцагч шинэчлэгдлээ.");
       } else {
         await apiFetch(`/customers`, {
           method: "POST",
           body: JSON.stringify(payload),
         });
-        toast.success("Customer created.");
+        toast.success("Харилцагч амжилттай үүслээ.");
       }
 
       closeDialog();
-      // revalidate current page
-      mutate();
+      mutate(); // одоогийн хуудсыг дахин ачаалах
     } catch (e: any) {
-      // map common API errors (e.g., ConflictException for unique email)
       const msg = e?.message || "";
       if (msg.toLowerCase().includes("email") && msg.toLowerCase().includes("exists")) {
-        toast.error("Email already exists.");
+        toast.error("Имэйл аль хэдийн бүртгэлтэй байна.");
       } else {
-        toast.error(msg || "Failed");
+        toast.error(msg || "Амжилтгүй");
       }
     }
   };
@@ -106,27 +104,25 @@ export default function CustomersView() {
   const onDelete = async (id: string) => {
     try {
       await apiFetch(`/customers/${id}`, { method: "DELETE" });
-      toast.success("Customer deleted.");
+      toast.success("Харилцагч устгалаа.");
       mutate();
     } catch (e: any) {
-      toast.error(e?.message || "Failed");
+      toast.error(e?.message || "Амжилтгүй");
     }
   };
 
-  // pagination helpers (client-side estimate; your API returns an array only)
+  // хуудаслалт
   const canPrev = page > 0;
-  // We can't know if there's a "next page" without total;
-  // naive check: if we got `take` items, assume maybe more.
   const canNext = (data?.length ?? 0) === take;
 
   return (
     <div className="p-6 space-y-6">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <h1 className="text-2xl font-semibold">Customers</h1>
+        <h1 className="text-2xl font-semibold">Харилцагчид</h1>
 
         <div className="flex w-full sm:w-auto items-center gap-2">
           <Input
-            placeholder="Search by name/email/phone…"
+            placeholder="Нэр/имэйл/утсаар хайх…"
             value={q}
             onChange={(e) => {
               setQ(e.target.value);
@@ -143,17 +139,17 @@ export default function CustomersView() {
           >
             <DialogTrigger asChild>
               <Button onClick={() => { setEditingId(null); setForm(empty); }}>
-                <Plus className="mr-2 h-4 w-4" /> New Customer
+                <Plus className="mr-2 h-4 w-4" /> Шинэ харилцагч
               </Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-lg">
               <DialogHeader>
-                <DialogTitle>{editingId ? "Edit Customer" : "New Customer"}</DialogTitle>
+                <DialogTitle>{editingId ? "Харилцагч засах" : "Шинэ харилцагч"}</DialogTitle>
               </DialogHeader>
 
               <div className="grid gap-4 py-2">
                 <div className="grid gap-1.5">
-                  <Label>Name</Label>
+                  <Label>Нэр</Label>
                   <Input
                     value={form.name || ""}
                     onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
@@ -162,7 +158,7 @@ export default function CustomersView() {
                 </div>
 
                 <div className="grid gap-1.5">
-                  <Label>Abbreviation</Label>
+                  <Label>Товчлол</Label>
                   <Input
                     value={form.abbName || ""}
                     onChange={(e) => setForm((f) => ({ ...f, abbName: e.target.value }))}
@@ -171,7 +167,7 @@ export default function CustomersView() {
                 </div>
 
                 <div className="grid gap-1.5">
-                  <Label>Email</Label>
+                  <Label>Имэйл</Label>
                   <Input
                     value={form.email || ""}
                     onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
@@ -182,7 +178,7 @@ export default function CustomersView() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="grid gap-1.5">
-                    <Label>Phone</Label>
+                    <Label>Утас</Label>
                     <Input
                       value={form.phone || ""}
                       onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
@@ -190,7 +186,7 @@ export default function CustomersView() {
                     />
                   </div>
                   <div className="grid gap-1.5">
-                    <Label>Mobile</Label>
+                    <Label>Гар утас</Label>
                     <Input
                       value={form.mobile || ""}
                       onChange={(e) => setForm((f) => ({ ...f, mobile: e.target.value }))}
@@ -200,7 +196,7 @@ export default function CustomersView() {
                 </div>
 
                 <div className="grid gap-1.5">
-                  <Label>Fax</Label>
+                  <Label>Факс</Label>
                   <Input
                     value={form.fax || ""}
                     onChange={(e) => setForm((f) => ({ ...f, fax: e.target.value }))}
@@ -209,18 +205,18 @@ export default function CustomersView() {
                 </div>
 
                 <div className="grid gap-1.5">
-                  <Label>Address</Label>
+                  <Label>Хаяг</Label>
                   <Input
                     value={form.address || ""}
                     onChange={(e) => setForm((f) => ({ ...f, address: e.target.value }))}
-                    placeholder="Ulaanbaatar…"
+                    placeholder="Улаанбаатар…"
                   />
                 </div>
               </div>
 
               <DialogFooter>
-                <Button variant="outline" onClick={closeDialog}>Cancel</Button>
-                <Button onClick={onSubmit}>{editingId ? "Save" : "Create"}</Button>
+                <Button variant="outline" onClick={closeDialog}>Болих</Button>
+                <Button onClick={onSubmit}>{editingId ? "Хадгалах" : "Үүсгэх"}</Button>
               </DialogFooter>
             </DialogContent>
           </Dialog>
@@ -229,7 +225,13 @@ export default function CustomersView() {
 
       <div className="rounded-xl border">
         <div className="p-3 border-b text-sm text-muted-foreground flex items-center justify-between">
-          <span>{isLoading ? "Loading…" : error ? "Failed to load" : `${data?.length ?? 0} customers`}</span>
+          <span>
+            {isLoading
+              ? "Ачаалж байна…"
+              : error
+                ? "Ачаалах үед алдаа гарлаа"
+                : `${data?.length ?? 0} харилцагч`}
+          </span>
           <div className="flex items-center gap-2">
             <Button
               variant="outline"
@@ -237,7 +239,7 @@ export default function CustomersView() {
               disabled={!canPrev}
               onClick={() => setPage((p) => Math.max(0, p - 1))}
             >
-              Prev
+              Өмнөх
             </Button>
             <Button
               variant="outline"
@@ -245,7 +247,7 @@ export default function CustomersView() {
               disabled={!canNext}
               onClick={() => setPage((p) => p + 1)}
             >
-              Next
+              Дараах
             </Button>
             <Input
               type="number"
@@ -264,14 +266,14 @@ export default function CustomersView() {
 
         <div className="divide-y">
           <div className="grid grid-cols-8 gap-2 p-3 font-medium text-sm">
-            <div>Name</div>
-            <div>Abb.</div>
-            <div>Email</div>
-            <div>Phone</div>
-            <div>Mobile</div>
-            <div>Fax</div>
-            <div>Address</div>
-            <div className="text-right">Actions</div>
+            <div>Нэр</div>
+            <div>Товчлол</div>
+            <div>Имэйл</div>
+            <div>Утас</div>
+            <div>Гар утас</div>
+            <div>Факс</div>
+            <div>Хаяг</div>
+            <div className="text-right">Үйлдэл</div>
           </div>
 
           {data?.map((c) => (
@@ -295,7 +297,9 @@ export default function CustomersView() {
           ))}
 
           {!isLoading && !error && (data?.length ?? 0) === 0 && (
-            <div className="p-6 text-center text-sm text-muted-foreground">No customers yet.</div>
+            <div className="p-6 text-center text-sm text-muted-foreground">
+              Одоогоор харилцагч алга.
+            </div>
           )}
         </div>
       </div>

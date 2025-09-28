@@ -13,7 +13,6 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
       <div className="hidden md:block">
         <Sidebar />
       </div>
-
       {/* Mobile Drawer */}
       {open && (
         <div className="fixed inset-0 z-40 flex">

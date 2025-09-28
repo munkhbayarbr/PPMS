@@ -3,25 +3,47 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { LayoutDashboard, ClipboardList, Package, Boxes, Users, BarChart2, Settings } from "lucide-react";
+import {
+  LayoutDashboard,
+  ClipboardList,
+  Package,
+  Boxes,
+  Users,
+  BarChart2,
+  Settings,
+  UserCircle,
+  Palette,
+  Droplets,
+  Layers,
+} from "lucide-react";
 
-type NavItem = { href: string; label: string; icon: React.ElementType; };
+type NavItem = { href: string; label: string; icon: React.ElementType };
+
 const nav: NavItem[] = [
   { href: "/dashboard", label: "Хянах самбар", icon: LayoutDashboard },
-  { href: "/Dashboard/orders",    label: "Захиалга",     icon: ClipboardList },
-  { href: "/processes", label: "Процесс",      icon: Boxes },
-  { href: "/products",  label: "Бүтээгдэхүүн", icon: Package },
-  { href: "/employees", label: "Ажилчид",      icon: Users },
-  { href: "/reports",   label: "Тайлан",       icon: BarChart2 },
-  { href: "/settings",  label: "Тохиргоо",     icon: Settings },
-  { href: "/Dashboard/customers",  label: "Үйлчлүүлэгчид",     icon: Users },
+  { href: "/Dashboard/orders", label: "Захиалга", icon: ClipboardList },
+  { href: "/processes", label: "Процесс", icon: Boxes },
+  { href: "/products", label: "Бүтээгдэхүүн", icon: Package },
+  { href: "/employees", label: "Ажилчид", icon: Users },
+  { href: "/reports", label: "Тайлан", icon: BarChart2 },
+  { href: "/settings", label: "Тохиргоо", icon: Settings },
+  { href: "/Dashboard/customers", label: "Үйлчлүүлэгчид", icon: UserCircle },
+
+  // --- NEW LOOKUPS & PROCESSES ---
+  { href: "/Dashboard/fiber-types", label: "Fiber Types", icon: Layers },
+  { href: "/Dashboard/fiber-colors", label: "Fiber Colors", icon: Palette },
+  { href: "/Dashboard/out-colors", label: "Out Colors", icon: Droplets },
+  { href: "/Dashboard/p1", label: "P1 Intake", icon: Boxes },
+  { href: "/Dashboard/p2-dyeing", label: "P2 Dyeing", icon: Droplets },
 ];
 
 export default function Sidebar() {
   const pathname = usePathname();
   return (
     <aside className="h-screen w-64 border-r bg-card text-card-foreground flex flex-col">
-      <div className="h-16 flex items-center px-4 border-b font-semibold">ҮПМС</div>
+      <div className="h-16 flex items-center px-4 border-b font-semibold">
+        ҮПМС
+      </div>
       <nav className="flex-1 p-2 space-y-1">
         {nav.map(({ href, label, icon: Icon }) => {
           const active = pathname === href || pathname.startsWith(href + "/");
@@ -39,7 +61,9 @@ export default function Sidebar() {
           );
         })}
       </nav>
-      <div className="p-4 border-t text-xs text-muted-foreground">© {new Date().getFullYear()} PPMS</div>
+      <div className="p-4 border-t text-xs text-muted-foreground">
+        © {new Date().getFullYear()} PPMS
+      </div>
     </aside>
   );
 }

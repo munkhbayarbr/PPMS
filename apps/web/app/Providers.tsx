@@ -8,7 +8,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
   <SessionProvider>
      
         {children}
-        <Toaster richColors position="top-right" />
+        <Toaster richColors position="bottom-right" />
      
     </SessionProvider>
   );
