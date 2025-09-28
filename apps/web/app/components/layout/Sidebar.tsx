@@ -42,8 +42,8 @@ const nav: NavItem[] = [
   { href: "/Dashboard/p7-twisting", label: "P7 Twisting", icon: Boxes },
   { href: "/Dashboard/factory-process", label: "Процесс нэршил", icon: Settings },
   { href: "/Dashboard/bobbins", label: "Боббин", icon: Package },
-
-
+{ href: "/Dashboard/trace", label: "trace", icon: Package },
+{ href: "/Dashboard/roles", label: "Roles", icon: Users },
 
 
 ];
