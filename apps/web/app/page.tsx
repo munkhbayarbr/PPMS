@@ -1,4 +1,7 @@
+"use client";
+import { useSession } from "next-auth/react";
 import Image, { type ImageProps } from "next/image";
+import { useRouter } from "next/navigation";
 
 
 type Props = Omit<ImageProps, "src"> & {
@@ -18,7 +21,12 @@ const ThemeImage = (props: Props) => {
 };
 
 export default function Home() {
-  return (
-   <div>Hello,world</div>
-  );
+  const { data: session, status } = useSession();
+  const router = useRouter();
+
+  // If you want to honor a callback in the URL, uncomment next line:
+  // const callbackUrl = params.get("callbackUrl") || "/Dashboard";
+  const callbackUrl = "/login";
+   router.replace(callbackUrl);
+  return <div>Hello,world</div>;
 }

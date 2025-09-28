@@ -1,6 +1,6 @@
 // middleware.ts
 import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
+import { NextRequest } from "next/server";
 import { getToken } from "next-auth/jwt";
 
 const PUBLIC_PREFIXES = [
@@ -38,7 +38,6 @@ export async function middleware(req: NextRequest) {
     url.searchParams.set("callbackUrl", pathname + search);
     return NextResponse.redirect(url);
   }
-
   return NextResponse.next();
 }
 

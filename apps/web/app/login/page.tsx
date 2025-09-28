@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { signIn } from "next-auth/react";
-import { toast } from "sonner"; // ✅ use toast
+import { signIn, useSession } from "next-auth/react";
+import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -12,7 +12,10 @@ import { Eye, EyeOff, Loader2, LogIn } from "lucide-react";
 export default function LoginPage() {
   const router = useRouter();
   const params = useSearchParams();
-  const callbackUrl = params.get("callbackUrl") || "/";
+
+  // If you want to honor a callback in the URL, uncomment next line:
+  // const callbackUrl = params.get("callbackUrl") || "/Dashboard";
+  const callbackUrl = "/Dashboard";
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -20,34 +23,59 @@ export default function LoginPage() {
   const [remember, setRemember] = useState(true);
   const [loading, setLoading] = useState(false);
 
-  async function handleSubmit(e: React.FormEvent) {
+  const { data: session, status } = useSession();
+
+  // Redirect after successful auth (run on client only)
+  useEffect(() => {
+    if (status === "authenticated") {
+      router.replace(callbackUrl);
+    }
+  }, [status, router, callbackUrl]);
+
+  // Prefill email from localStorage
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem("ppms_last_email");
+      if (saved) setEmail(saved);
+    } catch {}
+  }, []);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (loading) return;
+
     setLoading(true);
-
-    if (remember) {
+    try {
+      // Persist or clear remembered email
       try {
-        localStorage.setItem("ppms_last_email", email);
+        if (remember) localStorage.setItem("ppms_last_email", email);
+        else localStorage.removeItem("ppms_last_email");
       } catch {}
+
+      const res = await signIn("credentials", {
+        redirect: false,
+        email,
+        password,
+        callbackUrl,
+      });
+
+      if (!res || res.error) {
+        // Map common NextAuth error codes to a friendly message
+        const message =
+          res?.error === "CredentialsSignin"
+            ? "И-мэйл эсвэл нууц үг буруу байна"
+            : "Нэвтрэхэд алдаа гарлаа. Дахин оролдоно уу.";
+        toast.error(message);
+        return;
+      }
+
+      toast.success("Амжилттай нэвтэрлээ");
+      router.push(res.url ?? callbackUrl);
+    } catch {
+      toast.error("Сүлжээний алдаа. Дараа дахин оролдоно уу.");
+    } finally {
+      setLoading(false);
     }
-
-    const res = await signIn("credentials", {
-      redirect: false,
-      email,
-      password,
-      callbackUrl,
-    });
-
-    setLoading(false);
-
-    if (!res || res.error) {
-      toast.error("Нэвтрэх мэдээлэл буруу байна");
-      return;
-    }
-    console.log(res)
-    toast.success("Амжилттай нэвтэрлээ");
-    if (res.url) router.push(res.url);
-    else router.push(callbackUrl);
   }
 
   return (
@@ -69,6 +97,7 @@ export default function LoginPage() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 autoComplete="email"
+                disabled={loading}
               />
             </div>
 
@@ -84,6 +113,7 @@ export default function LoginPage() {
                   required
                   autoComplete="current-password"
                   className="pr-10"
+                  disabled={loading}
                 />
                 <button
                   type="button"
@@ -103,6 +133,7 @@ export default function LoginPage() {
                   checked={remember}
                   onChange={(e) => setRemember(e.target.checked)}
                   className="h-4 w-4 accent-[hsl(var(--primary))]"
+                  disabled={loading}
                 />
                 Сануулах
               </label>
@@ -125,12 +156,12 @@ export default function LoginPage() {
               )}
             </Button>
 
-            {/* ➕ Бүртгүүлэх товч */}
             <Button
               type="button"
               variant="outline"
               className="w-full mt-2"
               onClick={() => router.push("/login/register")}
+              disabled={loading}
             >
               Бүртгүүлэх
             </Button>
