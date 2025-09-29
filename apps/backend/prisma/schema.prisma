@@ -36,9 +36,9 @@ model User {
 }
 
 model Role {
-  id     String  @id @default(cuid())
-  nameEn String  @unique
-  nameMn String?
+  id        String         @id @default(cuid())
+  nameEn    String         @unique
+  nameMn    String?
   employees EmployeeRole[]
 }
 
@@ -381,4 +381,3 @@ model AuditLog {
 
   @@index([entity, entityId])
 }
-

@@ -11,6 +11,11 @@ services:
       - "5432:5432"
     volumes:
       - ./docker/postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ppms -d ppms"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
 
   # Optional: browser DB admin at http://localhost:8080
   pgadmin:
@@ -18,9 +23,10 @@ services:
     container_name: ppms-pgadmin
     restart: unless-stopped
     environment:
-      PGADMIN_DEFAULT_EMAIL: admin@local
+      PGADMIN_DEFAULT_EMAIL: admin@example.com   # must be a valid-looking email
       PGADMIN_DEFAULT_PASSWORD: admin
     ports:
       - "8080:80"
     depends_on:
-      - db
+      db:
+        condition: service_healthy
