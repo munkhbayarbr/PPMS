@@ -31,4 +31,5 @@ export class P2BlendingController {
 
   @Delete(':id') @ApiOkResponse({ description: 'Deleted' })
   remove(@Param('id') id: string) { return this.service.remove(id); }
+  
 }

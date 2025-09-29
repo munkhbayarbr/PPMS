@@ -33,7 +33,9 @@ import { ReportsModule } from './reports/reports.module';
 import { EmployeeRolesModule } from './employee-roles/employee-roles.module';
 import { RolesModule } from './roles/roles.module';
 import { RolesController } from './roles/roles.controller';
-
+import { WorkflowTemplatesModule } from './workflow-templates/workflow-templates.module';
+import { OrdersModule } from './orders/orders.module';
+import { WorkflowModule } from './workflow/workflow.module';
 @Module({
   imports: [
     PrismaModule,
@@ -63,6 +65,9 @@ import { RolesController } from './roles/roles.controller';
     ReportsModule,
     RolesModule,
     EmployeeRolesModule,
+    WorkflowTemplatesModule,
+    OrdersModule,
+    WorkflowModule
   ],
   controllers: [RolesController],
 })

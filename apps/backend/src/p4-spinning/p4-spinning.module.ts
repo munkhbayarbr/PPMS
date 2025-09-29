@@ -2,9 +2,9 @@ import { Module } from '@nestjs/common';
 import { PrismaModule } from 'prisma/prisma.module';
 import { P4SpinningService } from './p4-spinning.service';
 import { P4SpinningController } from './p4-spinning.controller';
-
+import { WorkflowModule } from 'src/workflow/workflow.module';
 @Module({
-  imports: [PrismaModule],
+  imports: [PrismaModule, WorkflowModule],
   providers: [P4SpinningService],
   controllers: [P4SpinningController],
 })

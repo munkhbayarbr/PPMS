@@ -33,12 +33,13 @@ model User {
   p5Windings  P5Winding[]  @relation("P5Operator")
   p6Doublings P6Doubling[] @relation("P6Operator")
   p7Twistings P7Twisting[] @relation("P7Operator")
+  OrderStage  OrderStage[]
 }
 
 model Role {
-  id     String  @id @default(cuid())
-  nameEn String  @unique
-  nameMn String?
+  id        String         @id @default(cuid())
+  nameEn    String         @unique
+  nameMn    String?
   employees EmployeeRole[]
 }
 
@@ -75,6 +76,7 @@ model Customer {
 
   // Relations
   p1Stocks P1Stock[]
+  Order    Order[]
 
   @@index([name])
 }
@@ -207,7 +209,10 @@ model P3Carding {
   p3Waste       Decimal? @db.Decimal(12, 3)
   bobbinNum     Int?
   userId        String
-
+  
+  orderId   String?
+  stageIndex Int?
+  
   operator User @relation("P3Operator", fields: [userId], references: [id], onDelete: Restrict)
 
   // From P2 -> P3
@@ -245,7 +250,8 @@ model P4Spinning {
   p4RovenWeight Decimal? @db.Decimal(12, 3)
   p4Waste       Decimal? @db.Decimal(12, 3)
   userId        String
-
+  orderId   String?
+  stageIndex Int?
   operator User     @relation("P4Operator", fields: [userId], references: [id], onDelete: Restrict)
   fromP3   P3ToP4[]
   toP5     P4ToP5[]
@@ -278,6 +284,9 @@ model P5Winding {
   inRoughWeight Decimal? @db.Decimal(12, 3)
   p5OroosonUtas Decimal? @db.Decimal(12, 3) // wound yarn
   userId        String
+
+  orderId   String?
+  stageIndex Int?
 
   operator User     @relation("P5Operator", fields: [userId], references: [id], onDelete: Restrict)
   fromP4   P4ToP5[]
@@ -312,6 +321,9 @@ model P6Doubling {
   p5DavharUtas  Decimal? @db.Decimal(12, 3) // doubled yarn
   userId        String
 
+orderId   String?
+  stageIndex Int?
+
   operator User     @relation("P6Operator", fields: [userId], references: [id], onDelete: Restrict)
   fromP5   P5ToP6[]
   toP7     P6ToP7[]
@@ -345,6 +357,9 @@ model P7Twisting {
   p5BelenUtas   Decimal? @db.Decimal(12, 3) // finished yarn
   userId        String
 
+  orderId   String?
+  stageIndex Int?
+  
   operator User     @relation("P7Operator", fields: [userId], references: [id], onDelete: Restrict)
   fromP6   P6ToP7[]
 }
@@ -382,3 +397,97 @@ model AuditLog {
   @@index([entity, entityId])
 }
 
+// ===== Workflow Engine: enums =====
+enum StageCode {
+  P1
+  P2
+  P2B
+  P3
+  P4
+  P5
+  P6
+  P7
+  P8
+  P9
+}
+
+enum StageStatus {
+  PENDING
+  IN_PROGRESS
+  DONE
+  BLOCKED
+  SKIPPED
+  NOT_STARTED
+}
+
+// ===== Workflow Templates =====
+model WorkflowTemplate {
+  id        String                  @id @default(cuid())
+  name      String
+  isActive  Boolean                 @default(true)
+  stages    WorkflowStageTemplate[]
+  createdAt DateTime                @default(now())
+  updatedAt DateTime                @updatedAt
+  Order     Order[]
+}
+
+model WorkflowStageTemplate {
+  id               String    @id @default(cuid())
+  templateId       String
+  orderIndex       Int
+  stageCode        StageCode
+  // Optional link to your FactoryProcess for labels/icons
+  factoryProcessId String?
+
+  template WorkflowTemplate @relation(fields: [templateId], references: [id], onDelete: Cascade)
+
+  @@unique([templateId, orderIndex])
+  @@index([templateId, orderIndex])
+}
+
+model Order {
+  id         String   @id @default(cuid())
+  code       String   @unique
+  customerId String?
+  templateId String
+  startIndex Int      @default(0) // where this order starts in the template
+  endIndex   Int? // null => through the last template stage
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  template WorkflowTemplate @relation(fields: [templateId], references: [id], onDelete: Restrict)
+  customer Customer?        @relation(fields: [customerId], references: [id])
+  stages   OrderStage[]
+}
+
+model OrderStage {
+  id        String      @id @default(cuid())
+  orderId   String
+  index     Int // position within THIS order (0..n)
+  stageCode StageCode
+  status    StageStatus @default(PENDING)
+
+  // lightweight planning/actuals
+  plannedQty   Decimal? @db.Decimal(14, 3)
+  completedQty Decimal? @db.Decimal(14, 3)
+
+  startedAt  DateTime?
+  finishedAt DateTime?
+
+  // Assignment
+  assigneeId String?
+  assignee   User?   @relation(fields: [assigneeId], references: [id])
+
+  // Polymorphic pointer to the actual record (P2/P3/P4...)
+  recordTable String? // e.g. "p3_carding", "p4_spinning", "p2_dyeing", etc.
+  recordId    String? // cuid of the concrete row
+
+  order Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  @@unique([orderId, index])
+  @@index([orderId, index])
+  @@index([stageCode])
+  @@index([status])
+  @@index([assigneeId])
+  @@index([recordTable, recordId])
+}

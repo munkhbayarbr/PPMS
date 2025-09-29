@@ -39,4 +39,18 @@ export class P2DyeingsController {
   remove(@Param('id') id: string) {
     return this.p2DyeingsService.remove(id);
   }
+    @Post('start/:orderId/:stageIndex')
+  startStage(@Param('orderId') orderId: string, @Param('stageIndex') stageIndex: string) {
+    return this.p2DyeingsService.startStage(orderId, Number(stageIndex));
+  }
+
+  @Post('batch')
+  createBatch(@Body() dto: CreateP2DyeingDto & { orderId?: string; stageIndex?: number }) {
+    return this.p2DyeingsService.createBatch(dto);
+  }
+
+  @Post('complete/:orderId/:stageIndex')
+  completeStage(@Param('orderId') orderId: string, @Param('stageIndex') stageIndex: string) {
+    return this.p2DyeingsService.completeStage(orderId, Number(stageIndex));
+  }
 }

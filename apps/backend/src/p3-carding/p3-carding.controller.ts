@@ -16,7 +16,6 @@ export class P3CardingController {
   create(@Body() dto: CreateP3CardingDto) {
     return this.service.create(dto);
   }
-
   @Get()
   findAll() {
     return this.service.findAll();
@@ -35,5 +34,19 @@ export class P3CardingController {
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.service.remove(id);
+  }
+    @Post('start/:orderId/:stageIndex')
+  startStage(@Param('orderId') orderId: string, @Param('stageIndex') stageIndex: string) {
+    return this.service.startStage(orderId, Number(stageIndex));
+  }
+
+  @Post('batch')
+  createBatch(@Body() dto: any & { orderId?: string; stageIndex?: number }) {
+    return this.service.createBatch(dto);
+  }
+
+  @Post('complete/:orderId/:stageIndex')
+  completeStage(@Param('orderId') orderId: string, @Param('stageIndex') stageIndex: string) {
+    return this.service.completeStage(orderId, Number(stageIndex));
   }
 }
